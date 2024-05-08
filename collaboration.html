@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Collaboration</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<!-- 	<a href="index.html" class="logo">Collins K.</a> -->
+				</header>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Projects</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li class="active"><a href="collaboration.html">Collaborations</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://twitter.com/ckapenteng" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.linkedin.com/in/ckapenteng/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/ckapenteng/ckapenteng.github.io" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">May 3, 2024</span>
+									<h3>Comparative Analysis of ML Models in Predicting CAD</h3>
+									<p>Collins Kwasi Apenteng & Mbye Sallah<br />
+									May 2024. Data <a href="cad-analysis.html">Preprocessing and Analysis</a>.</p>
+								</header>
+								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
+								<p><b>Introduction</b></p>
+								<p>Early diagnosis of coronary artery disease (CAD) enables timely medical interventions that can lessen the disease's impact, enhance patient outcomes, and save lives. This has prompted significant research in using Machine Learning (LM) algorithms to aid early diagnosis of CAD. Among the ML algorithms used, Garavand et al. (2023) document that random forest (RF), linear regression (LR), neural networks (NNs), support vector machine (SVM), and K-nearest network (KNN) are the most applied. However, the performance of these algorithms is mixed among different studies. A comprehensive literature review of studies on ML algorithms for CAD by Alizadehsani et al. (2019) reveals that the accuracy rates and sensitivities of the ML algorithms for CAD depend on the sample data, sample size, location of the data, performance metric, and ML methodology employed. For instance, while Jabbar and Deekshatulu (2013) found that the KNN classifier yields a predictive accuracy rate of 100%, Acharya et al. (2017) found 98.5% accuracy rate. A similar divergence in the accuracy rate for SVM and classifiers exists. We extend the analysis by analyzing and comparing five classifiers namely Logistic Regression, K-Nearest Neighbors (KNN), Naive Bayes, Support Vector Machine (SVM), and Random Forest using the Sani dataset uploaded on Canvas.</p>
+								<p><b>Data Description and Preprocessing</b></p>
+								<p>We use the Z-Alizadeh Sani dataset from the University of California, Irvine Machine Learning Repository. The dataset has information on 303 individuals of whom 216 are classified as CAD and 87 as normal. A CAD patient is an individual with at least 50% diameter narrowing. Individuals with a diameter narrowing of less than 50% are classified as normal.  The dataset has 56 features containing demographic and health information about the 303 individuals. Not all these features are relevant for predictive algorithms. We therefore follow a feature selection criterion proposed by Kursa and Rudnicki (2011) to select the most relevant features for our analysis.</p>
+								<p>Kursa and Rudnicki (2011) showed that using a Random Forest algorithm to identify and rank the most relevant features for predicting the outcome yields reasonable accuracy. We first predict CAD using all the features in the dataset. Next, we calculate the variable importance measures for each predictor in the model using the average decrease in model accuracy on the out-of-bag samples when a given variable is excluded from the model. We then sort the features based on their importance scores and extract the top 15 features.  Thus our final Sani dataset has 16 variables with 303 patients.</p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Collins</li><li><a href="mailto:ca652619@ohio.edu">Email Me</a></li></ul>
+				</div>
+
+		</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
